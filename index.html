@@ -31,6 +31,44 @@
       <div class="ground"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
     </section>
 
+    <section class="adventure-panel" aria-labelledby="adventureTitle">
+      <div class="panel-heading">
+        <div><span class="eyebrow">ATIVIDADE COMPLEMENTAR</span><h2 id="adventureTitle">Aventura 2D: Rota do Ender Dragon</h2></div>
+        <div class="adventure-progress" id="adventureProgress">Encontro 0 de 13</div>
+      </div>
+      <div class="adventure-start" id="adventureStart">
+        <div class="adventure-start-art" aria-hidden="true"><span>☺</span><i>⚔</i><b>🐉</b></div>
+        <p>Avance pelo mundo de blocos, responda às perguntas de Arquitetura Computacional e chegue ao chefão final.</p>
+        <button class="btn btn-adventure" id="startAdventure">JOGAR A AVENTURA 2D</button>
+      </div>
+      <div class="adventure-game hidden" id="adventureGame">
+        <div class="adventure-hud">
+          <span id="adventureStage">FASE 1</span>
+          <span id="adventureLives" aria-label="3 vidas">♥ ♥ ♥</span>
+          <span id="adventureEnemyStatus">INIMIGO À FRENTE</span>
+        </div>
+        <div class="adventure-world" id="adventureWorld" aria-label="Cenário da aventura 2D">
+          <div class="adventure-cloud cloud-a"></div><div class="adventure-cloud cloud-b"></div>
+          <div class="adventure-player" id="adventurePlayer" aria-label="Personagem do jogador">☺</div>
+          <div class="adventure-enemy" id="adventureEnemy" aria-label="Inimigo atual">☠</div>
+          <div class="adventure-terrain"></div>
+        </div>
+        <div class="adventure-question">
+          <div class="adventure-enemy-name" id="adventureEnemyName">Zumbi</div>
+          <h3 id="adventureQuestion">Pergunta</h3>
+          <div class="adventure-options" id="adventureOptions" role="group" aria-label="Alternativas"></div>
+          <button class="btn btn-adventure" id="submitAdventure" disabled>CONFIRMAR RESPOSTA</button>
+          <p class="adventure-feedback" id="adventureFeedback" aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="adventure-result hidden" id="adventureResult" aria-live="polite">
+        <div class="adventure-result-icon" id="adventureResultIcon">✦</div>
+        <h3 id="adventureResultTitle">Vila protegida!</h3>
+        <p id="adventureResultText"></p>
+        <button class="btn btn-adventure" id="restartAdventure">JOGAR NOVAMENTE</button>
+      </div>
+    </section>
+
     <section class="game-panel">
       <div class="panel-heading"><div><span class="eyebrow">MISSÃO PRINCIPAL</span><h2>Complete a cruzadinha</h2></div><div class="counter" id="counter">0 de 12 palavras</div></div>
       <div class="battle-instructions">Selecione uma pista, digite as letras nas casas e clique em <b>Atacar mob</b>. Cada palavra correta derrota um inimigo.</div>
