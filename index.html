@@ -9,22 +9,22 @@
 </head>
 <body>
   <header class="topbar">
-    <div class="brand"><span class="brand-icon">▦</span><div><strong>RAM - Roube (os villagers), Ataque, Minere</strong><small>DEFESA DA ARQUITETURA</small></div></div>
-    <div class="top-stats"><span>◆ FASE 01</span><span id="hearts">♥ ♥ ♥</span><span id="score">0 / 12</span></div>
+    <div class="brand"><span class="brand-icon mc-block-icon" aria-hidden="true"></span><div><strong>RAM - Roube (os villagers), Ataque, Minere</strong><small>DEFESA DA ARQUITETURA</small></div></div>
+    <div class="top-stats"><span>FASE 01</span><span id="hearts">♥ ♥ ♥</span><span id="score">0 / 12</span></div>
   </header>
 
   <main class="layout">
     <section class="intro">
       <div class="eyebrow">MODO SOBREVIVÊNCIA · SPRINT 3</div>
-      <h1>Proteja a <span>Vila Redstone</span></h1>
-      <p>Os mobs estão chegando! Resolva as pistas da cruzadinha para carregar sua espada de conhecimento e derrotá-los.</p>
+      <h1>Desafio da <span>JP's n Matthew's village</span></h1>
+      <p>Enfrente os desafios de Arquitetura Computacional e prove que você domina o mundo de blocos.</p>
     </section>
 
     <section class="scene" aria-label="Campo de batalha">
       <div class="sun"></div><div class="cloud cloud-a"></div><div class="cloud cloud-b"></div>
-      <div class="scene-label"><span class="live-dot"></span> INVASÃO EM ANDAMENTO</div>
+      <div class="scene-label"><span class="live-dot"></span> DESAFIO EM ANDAMENTO</div>
       <div class="enemy-stage">
-        <div class="mob-pixel" id="mobSprite" aria-hidden="true"><span class="mob-face">▪ ▪</span><span class="mob-mouth">▰</span></div>
+        <div class="mob-pixel" id="mobSprite" aria-hidden="true"><div class="mc-sprite mc-piglin"></div></div>
         <div class="mob-info"><small>INIMIGO ATUAL</small><strong id="mobName">Guardião de Redstone</strong><span id="mobStatus">Aguardando resposta...</span></div>
         <div class="distance"><span>AMEAÇA</span><div class="distance-bar"><i id="threatBar"></i></div></div>
       </div>
@@ -37,7 +37,7 @@
         <div class="adventure-progress" id="adventureProgress">Encontro 0 de 13</div>
       </div>
       <div class="adventure-start" id="adventureStart">
-        <div class="adventure-start-art" aria-hidden="true"><span>☺</span><i>⚔</i><b>🐉</b></div>
+        <div class="adventure-start-art" aria-hidden="true"><div class="mc-sprite mc-steve"></div><i class="mc-sword"></i><div class="mc-sprite mc-ender-dragon"></div></div>
         <p>Avance pelo mundo de blocos, responda às perguntas de Arquitetura Computacional e chegue ao chefão final.</p>
         <button class="btn btn-adventure" id="startAdventure">JOGAR A AVENTURA 2D</button>
       </div>
@@ -49,8 +49,8 @@
         </div>
         <div class="adventure-world" id="adventureWorld" aria-label="Cenário da aventura 2D">
           <div class="adventure-cloud cloud-a"></div><div class="adventure-cloud cloud-b"></div>
-          <div class="adventure-player" id="adventurePlayer" aria-label="Personagem do jogador">☺</div>
-          <div class="adventure-enemy" id="adventureEnemy" aria-label="Inimigo atual">☠</div>
+          <div class="adventure-player mc-sprite mc-steve" id="adventurePlayer" aria-label="Steve"></div>
+          <div class="adventure-enemy" id="adventureEnemy" aria-label="Inimigo atual"></div>
           <div class="adventure-terrain"></div>
         </div>
         <div class="adventure-question">
@@ -62,8 +62,8 @@
         </div>
       </div>
       <div class="adventure-result hidden" id="adventureResult" aria-live="polite">
-        <div class="adventure-result-icon" id="adventureResultIcon">✦</div>
-        <h3 id="adventureResultTitle">Vila protegida!</h3>
+        <div class="adventure-result-icon" id="adventureResultIcon"><span class="mc-sprite mc-ender-dragon"></span></div>
+        <h3 id="adventureResultTitle">Desafio concluído!</h3>
         <p id="adventureResultText"></p>
         <button class="btn btn-adventure" id="restartAdventure">JOGAR NOVAMENTE</button>
       </div>
@@ -80,8 +80,8 @@
       <div class="clues-panel">
         <div class="panel-heading compact"><div><span class="eyebrow">MAPA DE MISSÕES</span><h2>Pistas dos mobs</h2></div><span class="tag">12 DESAFIOS</span></div>
         <div class="clue-columns">
-          <div><h3>↔ Horizontais</h3><div id="acrossClues" class="clue-list"></div></div>
-          <div><h3>↕ Verticais</h3><div id="downClues" class="clue-list"></div></div>
+        <div><h3>Horizontais</h3><div id="acrossClues" class="clue-list"></div></div>
+        <div><h3>Verticais</h3><div id="downClues" class="clue-list"></div></div>
         </div>
       </div>
       <aside class="action-panel">
@@ -89,13 +89,13 @@
         <div class="active-number" id="activeNumber">09 · HORIZONTAL</div>
         <p id="activeClue">Selecione uma pista para começar sua defesa.</p>
         <div class="active-mob"><span class="mini-mob">▣</span><div><small>VOCÊ ENFRENTA</small><b id="activeMob">Guardião de Redstone</b></div></div>
-        <button class="btn btn-attack" id="attackBtn">⚔ ATACAR MOB</button>
-        <button class="btn btn-check" id="checkBtn">✓ CONFERIR TODAS</button>
-        <button class="btn btn-reset" id="resetBtn">↻ REINICIAR AVENTURA</button>
+        <button class="btn btn-attack" id="attackBtn">ATACAR MOB</button>
+        <button class="btn btn-check" id="checkBtn">CONFERIR TODAS</button>
+        <button class="btn btn-reset" id="resetBtn">REINICIAR AVENTURA</button>
         <p class="feedback" id="feedback" aria-live="polite">Escolha uma pista e preencha as casas.</p>
       </aside>
     </section>
-    <section class="victory hidden" id="victory"><div class="trophy">✦</div><h2>Vila protegida!</h2><p>Você derrotou todos os mobs e concluiu os 12 desafios de Arquitetura Computacional.</p><button class="btn btn-attack" id="playAgain">JOGAR NOVAMENTE</button></section>
+    <section class="victory hidden" id="victory"><div class="trophy mc-block-icon" aria-hidden="true"></div><h2>Desafio concluído!</h2><p>Você derrotou todos os mobs e concluiu os 12 desafios de Arquitetura Computacional.</p><button class="btn btn-attack" id="playAgain">JOGAR NOVAMENTE</button></section>
   </main>
   <footer>Feito por: Gabriel Figueiredo</footer>
   <script src="script.js"></script>
