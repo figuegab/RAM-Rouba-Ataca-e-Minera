@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aventura de cruzadinha de Arquitetura Computacional em um mundo de blocos.">
+  <title>BlocoCraft — Defesa da Arquitetura</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-icon">▦</span><div><strong>BLOCOCRAFT</strong><small>DEFESA DA ARQUITETURA</small></div></div>
+    <div class="top-stats"><span>◆ FASE 01</span><span id="hearts">♥ ♥ ♥</span><span id="score">0 / 12</span></div>
+  </header>
+
+  <main class="layout">
+    <section class="intro">
+      <div class="eyebrow">MODO SOBREVIVÊNCIA · SPRINT 3</div>
+      <h1>Proteja a <span>Vila Redstone</span></h1>
+      <p>Os mobs estão chegando! Resolva as pistas da cruzadinha para carregar sua espada de conhecimento e derrotá-los.</p>
+    </section>
+
+    <section class="scene" aria-label="Campo de batalha">
+      <div class="sun"></div><div class="cloud cloud-a"></div><div class="cloud cloud-b"></div>
+      <div class="scene-label"><span class="live-dot"></span> INVASÃO EM ANDAMENTO</div>
+      <div class="enemy-stage">
+        <div class="mob-pixel" id="mobSprite" aria-hidden="true"><span class="mob-face">▪ ▪</span><span class="mob-mouth">▰</span></div>
+        <div class="mob-info"><small>INIMIGO ATUAL</small><strong id="mobName">Guardião de Redstone</strong><span id="mobStatus">Aguardando resposta...</span></div>
+        <div class="distance"><span>AMEAÇA</span><div class="distance-bar"><i id="threatBar"></i></div></div>
+      </div>
+      <div class="ground"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    </section>
+
+    <section class="game-panel">
+      <div class="panel-heading"><div><span class="eyebrow">MISSÃO PRINCIPAL</span><h2>Complete a cruzadinha</h2></div><div class="counter" id="counter">0 de 12 palavras</div></div>
+      <div class="battle-instructions">Selecione uma pista, digite as letras nas casas e clique em <b>Atacar mob</b>. Cada palavra correta derrota um inimigo.</div>
+      <div class="board-wrap"><div id="board" class="board" role="group" aria-label="Tabuleiro da cruzadinha"></div></div>
+      <div class="board-legend"><span><i class="legend-empty"></i> Casa para digitar</span><span><i class="legend-good"></i> Palavra correta</span><span><i class="legend-bad"></i> Palavra incorreta</span></div>
+    </section>
+
+    <section class="lower-grid">
+      <div class="clues-panel">
+        <div class="panel-heading compact"><div><span class="eyebrow">MAPA DE MISSÕES</span><h2>Pistas dos mobs</h2></div><span class="tag">12 DESAFIOS</span></div>
+        <div class="clue-columns">
+          <div><h3>↔ Horizontais</h3><div id="acrossClues" class="clue-list"></div></div>
+          <div><h3>↕ Verticais</h3><div id="downClues" class="clue-list"></div></div>
+        </div>
+      </div>
+      <aside class="action-panel">
+        <div class="active-label">ALVO SELECIONADO</div>
+        <div class="active-number" id="activeNumber">09 · HORIZONTAL</div>
+        <p id="activeClue">Selecione uma pista para começar sua defesa.</p>
+        <div class="active-mob"><span class="mini-mob">▣</span><div><small>VOCÊ ENFRENTA</small><b id="activeMob">Guardião de Redstone</b></div></div>
+        <button class="btn btn-attack" id="attackBtn">⚔ ATACAR MOB</button>
+        <button class="btn btn-check" id="checkBtn">✓ CONFERIR TODAS</button>
+        <button class="btn btn-reset" id="resetBtn">↻ REINICIAR AVENTURA</button>
+        <p class="feedback" id="feedback" aria-live="polite">Escolha uma pista e preencha as casas.</p>
+      </aside>
+    </section>
+    <section class="victory hidden" id="victory"><div class="trophy">✦</div><h2>Vila protegida!</h2><p>Você derrotou todos os mobs e concluiu os 12 desafios de Arquitetura Computacional.</p><button class="btn btn-attack" id="playAgain">JOGAR NOVAMENTE</button></section>
+  </main>
+  <footer>JOGO EDUCACIONAL · ARQUITETURA COMPUTACIONAL · HTML, CSS E JAVASCRIPT</footer>
+  <script src="script.js"></script>
+</body>
+</html>
