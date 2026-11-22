@@ -23,7 +23,7 @@ function renderBoard(){
       input.setAttribute('aria-label',`Linha ${r+1}, coluna ${c+1}`);
       input.dataset.row=r;input.dataset.col=c;
       input.addEventListener('input',()=>{
-        input.value=input.value.normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').replace(/[^a-zA-Z]/g,'').toUpperCase().slice(-1);
+        input.value=input.value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-zA-Z]/g,'').toUpperCase().slice(-1);
         cell.classList.remove('correct','wrong');
         moveToNextCell(input);
       });
